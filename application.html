@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+        }
+
+        .container{
+            width:60%;
+            margin:auto;
+            background:white;
+            padding:30px;
+            margin-top:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h1{
+            text-align:center;
+            color:#003366;
+        }
+
+        label{
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        input, select{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            background:green;
+            color:white;
+            padding:12px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:darkgreen;
+        }
+
+        #successMsg{
+            margin-top:20px;
+            color:green;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            background:#003366;
+            color:white;
+            padding:10px 20px;
+            border-radius:5px;
+        }
+
+        .back-btn:hover{
+            background:#0055aa;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Vanguard University of Technology Admission Form</h1>
+
+    <form onsubmit="showMessage(event)">
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Phone Number</label>
+        <input type="text" required>
+
+        <label>Select Department</label>
+
+        <select required>
+            <option value="">Choose Department</option>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>BBA</option>
+            <option>English</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+    </form>
+
+    <p id="successMsg"></p>
+
+    <a href="admission.html" class="back-btn">
+        ⬅ Back to Admission
+    </a>
+
+</div>
+
+<script>
+
+function showMessage(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMsg").innerHTML =
+    "✅ Application Submitted Successfully!";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        .container{
+            width:85%;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align:center;
+            color:#003366;
+            margin-bottom:20px;
+        }
+
+        .info{
+            background:#eaf2ff;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:30px;
+        }
+
+        .info p{
+            font-size:18px;
+            margin:10px 0;
+        }
+
+        form{
+            margin-top:20px;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        textarea{
+            height:120px;
+        }
+
+        .btn{
+            background:#003366;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .btn:hover{
+            background:#0055aa;
+        }
+
+        .call-btn{
+            display:inline-block;
+            margin-top:15px;
+            background:green;
+            color:white;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .call-btn:hover{
+            background:darkgreen;
+        }
+
+        .home-btn{
+            display:inline-block;
+            margin-top:20px;
+            background:#444;
+            color:white;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .home-btn:hover{
+            background:#222;
+        }
+
+        #msg{
+            margin-top:15px;
+            color:green;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    <div class="info">
+        <p><strong>University Name:</strong> Vanguard University of Technology</p>
+        <p><strong>Address:</strong> Barishal, Bangladesh</p>
+        <p><strong>Phone:</strong> 01712345678</p>
+        <p><strong>Email:</strong> info@vanguarduniversity.com</p>
+
+        <a href="tel:01712345678" class="call-btn">
+            📞 Call Now
+        </a>
+    </div>
+
+    <form onsubmit="sendMessage(event)">
+
+        <label>Your Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Message</label>
+        <textarea required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="msg"></p>
+
+    <a href="index.html" class="home-btn">
+        ⬅ Back to Home
+    </a>
+
+</div>
+
+<script>
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    document.getElementById("msg").innerHTML =
+    "✅ Message Sent Successfully!";
+
+}
+
+</script>
+
+</body>
+</html>
